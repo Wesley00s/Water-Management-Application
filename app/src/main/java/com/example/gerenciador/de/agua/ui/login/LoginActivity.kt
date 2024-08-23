@@ -87,6 +87,7 @@ class LoginActivity : AppCompatActivity() {
                         loginViewModel.login(
                             username.text.toString(),
                             password.text.toString()
+
                         )
                 }
                 false
@@ -95,6 +96,7 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
+                binding.loading.visibility = View.VISIBLE
             }
         }
     }

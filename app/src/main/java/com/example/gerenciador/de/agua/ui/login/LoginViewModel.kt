@@ -11,6 +11,7 @@ import com.example.gerenciador.de.agua.ui.data.Result
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
+
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm
 
@@ -31,9 +32,9 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     fun loginDataChanged(username: String, password: String) {
         if (!isUserNameValid(username)) {
-            _loginForm.value = LoginFormState(usernameError = R.string.invalid_username)
+            _loginForm.value = LoginFormState(usernameError = R.string.invalid_usuario)
         } else if (!isPasswordValid(password)) {
-            _loginForm.value = LoginFormState(passwordError = R.string.invalid_password)
+            _loginForm.value = LoginFormState(passwordError = R.string.invalid_senha)
         } else {
             _loginForm.value = LoginFormState(isDataValid = true)
         }
