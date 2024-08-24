@@ -21,6 +21,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="label_senha">Senha</string>
     <string name="label_usuario">Usuário</string>
+    <string name="title_activity_home">HomeActivity</string>
 
 
 </resources>
